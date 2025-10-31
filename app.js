@@ -9,6 +9,8 @@ app.set("view engine", "ejs");
 // Enable static files serving
 app.use(express.static("public"));
 
+app.use(express.urlencoded({ extended: true }));
+
 // Define the port number where our server will listen
 
 const contacts = [];
