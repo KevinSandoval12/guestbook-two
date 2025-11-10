@@ -31,6 +31,10 @@ app.get("/admin", (req, res) => {
   res.render("admin", { contacts });
 });
 
+app.get("/contact", (req, res) => {
+  res.render("contact");
+});
+
 app.post("/submit-form", (req, res) => {
   const contact = {
     fname: req.body.fname,
@@ -39,6 +43,7 @@ app.post("/submit-form", (req, res) => {
     meet: req.body.meet,
     message: req.body.message,
     format: req.body.format,
+    timestamp: new Date().toLocaleString(),
   };
   contacts.push(contact);
   res.render("confirmation", { contact });

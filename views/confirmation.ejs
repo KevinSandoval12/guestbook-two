@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/contactLayout.css" />
     <link rel="stylesheet" href="/css/mediaqueries.css" />
     <link rel="stylesheet" href="/css/contact.css" />
     <link rel="icon" href="/img/logo-sqaure.jpg" />
-    <script src="/js/script.js" defer></script>
+    <script src="/js/guestbookScript.js" defer></script>
 
     <title>Email Me!</title>
   </head>
   <body>
+    <!-- Nav Bar Partials -->
+    <%- include('../partials/header') %>
+
     <div id="contact">
       <div class="contact-container">
         <div id="center">
@@ -49,6 +52,10 @@
               <tr>
                 <th>Format:</th>
                 <th><%= contact.format %></th>
+              </tr>
+              <tr>
+                <th>Date:</th>
+                <th><%= contact.timestamp %></th>
               </tr>
             </table>
             <button id="home" class="submit-btn">Return to Home</button>

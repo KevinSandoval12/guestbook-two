@@ -265,6 +265,15 @@ h2 {
 }
 
 /* CONTACT */
+#phone {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: row;
+}
 
 #contact {
   display: flex;
